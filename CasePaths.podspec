@@ -26,14 +26,5 @@ Pod::Spec.new do |s|
     'OTHER_SWIFT_FLAGS' => '-load-plugin-executable $(PODS_ROOT)/Development\\ Pods/CasePaths/Macros/CasePathsMacros#CasePathsMacros'
   }
 
-  s.subspec 'Core' do |ss|
-    ss.module_name = 'CasePathsCore'
-    ss.source_files = 'Sources/CasePathsCore/**/*.swift'
-  end
-
-  s.subspec 'CasePaths' do |ss|
-    ss.module_name = 'CasePaths'
-    ss.source_files = 'Sources/CasePaths/**/*.swift'
-    ss.dependency 'CasePaths/Core'
-  end
+  s.source_files = 'Sources/CasePaths/**/*.swift', 'Sources/CasePathsCore/**/*.swift'
 end
