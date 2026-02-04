@@ -28,5 +28,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/CasePaths/**/*.swift'
 
-  s.dependency 'CasePathsCore', '0.1.0'
+  s.dependency 'CasePathsCore', '0.1.1'
 end
