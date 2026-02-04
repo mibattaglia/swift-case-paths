@@ -12,4 +12,9 @@ Pod::Spec.new do |s|
 
   s.static_framework = true
   s.source_files = 'Sources/CasePathsCore/**/*.swift'
+
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES',
+    'OTHER_SWIFT_FLAGS' => '-package-name CasePathsCore'
+  }
 end

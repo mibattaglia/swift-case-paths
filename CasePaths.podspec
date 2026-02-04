@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   # Configure build flags to load the macro plugin
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
-    'OTHER_SWIFT_FLAGS' => '-load-plugin-executable ${PODS_TARGET_SRCROOT}/Macros/CasePathsMacros#CasePathsMacros'
+    'OTHER_SWIFT_FLAGS' => '-load-plugin-executable ${PODS_TARGET_SRCROOT}/Macros/CasePathsMacros#CasePathsMacros -package-name CasePaths'
   }
 
   # For the main app target (if it uses macros directly)
