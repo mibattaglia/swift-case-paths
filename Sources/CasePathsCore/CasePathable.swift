@@ -1,4 +1,17 @@
+#if canImport(IssueReporting)
 import IssueReporting
+#else
+@inline(__always)
+func reportIssue(
+  _ message: @autoclosure () -> String,
+  fileID: StaticString = #fileID,
+  filePath: StaticString = #filePath,
+  line: UInt = #line,
+  column: UInt = #column
+) {
+  _ = (message, fileID, filePath, line, column)
+}
+#endif
 
 /// A type that provides a collection of all of its case paths.
 ///

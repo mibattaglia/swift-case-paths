@@ -1,4 +1,9 @@
+#if canImport(XCTestDynamicOverlay)
 @_spi(CurrentTestCase) import XCTestDynamicOverlay
+#elseif canImport(XCTest)
+import XCTest
+@_spi(CurrentTestCase) public var XCTCurrentTestCase: XCTestCase? { nil }
+#endif
 
 #if canImport(ObjectiveC)
   import ObjectiveC

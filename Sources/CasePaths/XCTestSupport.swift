@@ -1,5 +1,10 @@
 import Foundation
+#if canImport(XCTestDynamicOverlay)
 @_spi(CurrentTestCase) import XCTestDynamicOverlay
+#elseif canImport(XCTest)
+import XCTest
+@_spi(CurrentTestCase) public var XCTCurrentTestCase: XCTestCase? { nil }
+#endif
 
 /// Asserts that an enum value matches a particular case and modifies the associated value in place.
 @available(*, deprecated, message: "Use 'CasePathable.modify' to mutate an expected case, instead.")
