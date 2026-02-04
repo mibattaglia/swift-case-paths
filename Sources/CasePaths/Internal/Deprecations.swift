@@ -3,6 +3,15 @@
 #elseif canImport(XCTest)
 import XCTest
 @_spi(CurrentTestCase) public var XCTCurrentTestCase: XCTestCase? { nil }
+#else
+@_spi(CurrentTestCase) public var XCTCurrentTestCase: AnyObject? { nil }
+@inline(__always) func XCTFail(
+  _ message: @autoclosure () -> String,
+  file: StaticString = #filePath,
+  line: UInt = #line
+) {
+  _ = (message, file, line)
+}
 #endif
 
 #if canImport(ObjectiveC)

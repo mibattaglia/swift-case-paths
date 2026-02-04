@@ -1,8 +1,8 @@
 @propertyWrapper
-internal struct UncheckedSendable<Value>: @unchecked Sendable {
-  internal var wrappedValue: Value
-  internal init(wrappedValue value: Value) {
+public struct UncheckedSendable<Value>: @unchecked Sendable {
+  public var wrappedValue: Value
+  public init(wrappedValue value: Value) {
     self.wrappedValue = value
   }
-  internal var projectedValue: Self { self }
+  public var projectedValue: Self { self }
 }
