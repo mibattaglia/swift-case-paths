@@ -1,17 +1,9 @@
 // NB: This is adapted from Custom Dump and should ideally be kept in sync.
-#if SWIFT_PACKAGE
-package func typeName(
-  _ type: Any.Type,
-  qualified: Bool = true,
-  genericsAbbreviated: Bool = false  // NB: This defaults to `true` in Custom Dump
-) -> String {
-#else
 internal func typeName(
   _ type: Any.Type,
   qualified: Bool = true,
   genericsAbbreviated: Bool = false  // NB: This defaults to `true` in Custom Dump
 ) -> String {
-#endif
   var name = _typeName(type, qualified: qualified)
     .replacingOccurrences(
       of: #"\(unknown context at \$[[:xdigit:]]+\)\."#,
