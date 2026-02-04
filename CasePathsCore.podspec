@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'CasePathsCore'
-  s.version        = '0.1.0'
+  s.version        = '0.1.1'
   s.summary        = 'Core case path utilities'
   s.description    = 'CasePaths core runtime module for Swift 6'
   s.author         = 'Point-Free'

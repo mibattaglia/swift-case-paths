@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'CasePaths'
-  s.version        = '0.1.0'
+  s.version        = '0.1.1'
   s.summary        = 'Case paths for enums with macro support'
   s.description    = 'CasePaths runtime + macros (prebuilt plugin) for Swift 6'
   s.author         = 'Point-Free'
